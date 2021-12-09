@@ -1,21 +1,6 @@
 apiVersion: v1
 entries:
-  rancher-monitoring-crd:
-  - annotations:
-      catalog.cattle.io/certified: rancher
-      catalog.cattle.io/hidden: "true"
-      catalog.cattle.io/namespace: cattle-monitoring-system
-      catalog.cattle.io/release-name: rancher-monitoring-crd
-    apiVersion: v1
-    created: "2021-12-09T15:24:04.70875-08:00"
-    description: Installs the CRDs for rancher-monitoring.
-    digest: 85de692eb502cbfde87e0226d652326653330065f1dc80e832afa5b101e8a02a
-    name: rancher-monitoring-crd
-    type: application
-    urls:
-    - https://nrfrush.github.io/prometheus-chart/rancher-monitoring-crd-16.6.0.tgz
-    version: 16.6.0
-  rancher-monitoring-mod:
+  rancher-monitoring:
   - annotations:
       artifacthub.io/links: |
         - name: Chart Source
@@ -26,16 +11,16 @@ entries:
       catalog.cattle.io/auto-install: rancher-monitoring-crd=match
       catalog.cattle.io/certified: rancher
       catalog.cattle.io/display-name: Monitoring
-      catalog.cattle.io/namespace: cattle-monitoring-system
+      catalog.cattle.io/namespace: cattle-prometheus
       catalog.cattle.io/provides-gvr: monitoring.coreos.com.prometheus/v1
       catalog.cattle.io/rancher-version: <2.4.14
-      catalog.cattle.io/release-name: rancher-monitoring-mod
+      catalog.cattle.io/release-name: rancher-monitoring
       catalog.cattle.io/requests-cpu: 4500m
       catalog.cattle.io/requests-memory: 4000Mi
       catalog.cattle.io/ui-component: monitoring
     apiVersion: v2
     appVersion: 0.48.0
-    created: "2021-12-09T15:24:04.730304-08:00"
+    created: "2021-12-09T15:46:39.899851-08:00"
     dependencies:
     - condition: grafana.enabled
       name: grafana
@@ -106,7 +91,7 @@ entries:
     description: Collects several related Helm charts, Grafana dashboards, and Prometheus
       rules combined with documentation and scripts to provide easy to operate end-to-end
       Kubernetes cluster monitoring with Prometheus using the Prometheus Operator.
-    digest: f40807545b0976065dd568ecb1dd115f9dfff4012f2c5b8ea57a43a68d189204
+    digest: f3a9edf6c4faab015cb069a6f0882e542045ebd660b876357bdcf0d67b841a9f
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -128,12 +113,27 @@ entries:
       name: Xtigyro
     - email: arvind.iyengar@suse.com
       name: Arvind
-    name: rancher-monitoring-mod
+    name: rancher-monitoring
     sources:
     - https://github.com/prometheus-community/helm-charts
     - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://nrfrush.github.io/prometheus-chart/rancher-monitoring-mod-16.6.0.tgz
+    - https://nrfrush.github.io/prometheus-chart/rancher-monitoring-16.6.0.tgz
     version: 16.6.0
-generated: "2021-12-09T15:24:04.70392-08:00"
+  rancher-monitoring-crd:
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/namespace: cattle-monitoring-system
+      catalog.cattle.io/release-name: rancher-monitoring-crd
+    apiVersion: v1
+    created: "2021-12-09T15:46:39.903799-08:00"
+    description: Installs the CRDs for rancher-monitoring.
+    digest: bb2a0b79665dc4e0151c7bccfd2159894bbd5a25a6c80d6ff89dad9ff9b7a5a1
+    name: rancher-monitoring-crd
+    type: application
+    urls:
+    - https://nrfrush.github.io/prometheus-chart/rancher-monitoring-crd-16.6.0.tgz
+    version: 16.6.0
+generated: "2021-12-09T15:46:39.878779-08:00"
