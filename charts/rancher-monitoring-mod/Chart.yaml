@@ -108,7 +108,7 @@ maintainers:
   name: Xtigyro
 - email: arvind.iyengar@suse.com
   name: Arvind
-name: rancher-monitoring
+name: rancher-monitoring-mod
 sources:
 - https://github.com/prometheus-community/helm-charts
 - https://github.com/prometheus-operator/kube-prometheus
