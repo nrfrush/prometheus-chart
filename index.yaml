@@ -3,7 +3,7 @@ entries:
   rancher-monitoring:
   - apiVersion: v1
     appVersion: 0.3.2
-    created: "2021-12-09T16:06:39.40939-08:00"
+    created: "2021-12-09T16:17:08.804286-08:00"
     dependencies:
     - condition: alertmanager.enabled
       name: alertmanager
@@ -75,7 +75,7 @@ entries:
       version: 0.0.1
     description: Provides monitoring for Kubernetes which is maintained by Rancher
       2.
-    digest: ca88b985099951affd9e0e4724531d3b87bb6ccd7ef58e3b0140bdbfb5bc942d
+    digest: f430d6218f082066b8346497581f0e0fa1592e56d32badd7e54210606adace20
     home: https://github.com/coreos/prometheus-operator
     icon: https://coreos.com/sites/default/files/inline-images/Overview-prometheus_0.png
     keywords:
@@ -91,4 +91,4 @@ entries:
     urls:
     - https://nrfrush.github.io/prometheus-chart/rancher-monitoring-0.3.2.tgz
     version: 0.3.2
-generated: "2021-12-09T16:06:39.398697-08:00"
+generated: "2021-12-09T16:17:08.794054-08:00"

@@ -3,10 +3,10 @@ operator:
   enabledRBAC: true
   apiGroup: "monitoring.coreos.com"
   image:
-    repository: rancher/mirrored-coreos-prometheus-operator
+    repository: rancher/mirrored-prometheus-operator-prometheus-operator
     tag: v0.48.0
     prometheusConfigReloader:
-      repository: rancher/mirrored-coreos-prometheus-config-reloader
+      repository: rancher/mirrored-prometheus-operator-prometheus-config-reloader
       tag: v0.48.0
     configmapReload:
       repository: rancher/mirrored-jimmidyson-configmap-reload
