@@ -13,6 +13,7 @@ rules:
   - {{ template "operator_api_group" . }}
   resources: 
   - alertmanager
+  - alertmanagerconfigs
   - alertmanagers
   - prometheus
   - prometheuses
@@ -24,6 +25,7 @@ rules:
   - prometheuses/finalizers
   - alertmanagers/finalizers
   - podmonitors
+  - probes
   verbs: 
   - "*"
 - apiGroups:
