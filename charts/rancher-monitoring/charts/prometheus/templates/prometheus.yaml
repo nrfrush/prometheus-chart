@@ -25,7 +25,7 @@ spec:
           fieldPath: status.podIP
     image: {{ template "system_default_registry" . }}{{ .Values.image.proxy.repository }}:{{ .Values.image.proxy.tag }}
     ports:
-    - containerPort: 8080
+    - containerPort: 8081
       name: nginx-http
       protocol: TCP
     {{- if and .Values.resources .Values.resources.proxy }}
