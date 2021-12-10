@@ -46,7 +46,6 @@ spec:
             - --log-format={{ .Values.logFormat }}
             - --log-level={{ .Values.logLevel }}
             - --prometheus-config-reloader={{ template "system_default_registry" . }}{{ .Values.image.prometheusConfigReloader.repository }}:{{ .Values.image.prometheusConfigReloader.tag }}
-            - --config-reloader-image={{ template "system_default_registry" . }}{{ .Values.image.configmapReload.repository }}:{{ .Values.image.configmapReload.tag }}
             - --labels={{ .Values.apiGroup }}=true
           ports:
           - containerPort: 8080
